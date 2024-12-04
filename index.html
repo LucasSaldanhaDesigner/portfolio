@@ -209,7 +209,13 @@
 		<div class="grax_tm_portfolio">
 			<div class="container">
 				<div class="grax_tm_title_holder">
-					<h3>Portfólio</h3>
+					<h3 class="portfolio">Portfólio</h3>
+						<style>
+						.portfolio {
+							color: white !important;
+						}
+						</style>
+
 				</div>
 				<div class="portfolio_list">
 					<ul class="gallery_zoom my_waypoint">
@@ -393,12 +399,19 @@
 		<div class="container">
 			<div class="part_inner">
 				<div class="left wow fadeInLeft" data-wow-duration="1.5s">
-					<h3>Minhas habilidades estão<br>ao seu alcance!</h3>
+					<h3 class="freelancer-available">Estou disponível para trabalhos freelancer</h3>
+						<style>
+						@media (min-width: 1024px) {
+							.freelancer-available {
+							margin-top: 50px; /* Ajuste o valor conforme necessário */
+							}
+						}
+						</style>
 					<p>Que tal transformar suas ideias em realidade? Ofereço soluções criativas e estratégicas para iniciar ou destacar sua marca.</p>
-					<p>Estou pronto para entender suas necessidades e criar projetos que vão além das suas expectativas. <a href="https://wa.me/55997163469" target="_blank">Entre em contato!</a></p>
+					<p>Estou pronto para entender suas necessidades e criar projetos que vão além das suas expectativas.<br><br><a href="https://wa.me/55997163469" target="_blank">Clique aqui para entrar em contato</a></p><br>
 				</div>
 				<div class="right wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s">
-					<div class="kioto_progress">
+					<div class="kioto_progress" id="kioto">
 						<div class="progress_inner" data-value="90">
 							<span><span class="label">Illustrator</span><span class="number">90%</span></span>
 							<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
@@ -408,15 +421,15 @@
 							<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
 						</div>
 						<div class="progress_inner" data-value="85" >
-							<span><span class="label">Figma, Penpot</span><span class="number">85%</span></span>
+							<span><span class="label">Figma, Penpot, XD</span><span class="number">85%</span></span>
 							<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
 						</div>
 						<div class="progress_inner" data-value="90">
-							<span><span class="label">Premier, Vegas, Pro Tools, Reaper</span><span class="number">90%</span></span>
+							<span><span class="label">Premier, Pro Tools, Reaper</span><span class="number">90%</span></span>
 							<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
 						</div>
 						<div class="progress_inner" data-value="80">
-							<span><span class="label">Visual Studio Code (Wordpress, HTML, CSS)</span><span class="number">80%</span></span>
+							<span><span class="label">HTML, CSS, Wordpress</span><span class="number">80%</span></span>
 							<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
 						</div>
 					</div>
@@ -429,9 +442,8 @@
 	<!-- COPYRIGHT -->
 	<div class="grax_tm_section">
 		<div class="grax_tm_copyright">
-			
 			<div class="container">
-				<div class="copyright_inner">
+				<div class="copyright_inner" id="copyright">
 					<div class="logo wow fadeInLeft" data-wow-duration="1s">
 						<img src="img/logo/logo.png" alt="" />
 					</div>
@@ -449,12 +461,27 @@
     <div class="mouse-cursor cursor-inner"></div>
 	<!-- /CURSOR -->
 	
-	<!-- START: Page Progress -->
+	<!-- START: Page Progress
 	<div class="progressbar">
 		<a href="#"><span class="text">To Top</span></a>
 		<span class="line"></span>
 	</div>
-	<!-- END: Page Progress -->
+	
+	<style>
+		@media (max-width: 768px) {
+		  .progressbar {
+			display: none;
+		  }
+		}
+	  
+		@media (min-width: 768px) and (max-width: 1024px) {
+		  .progressbar {
+			display: none;
+		  }
+		}
+	  </style>	  
+	
+	END: Page Progress -->
 		
 </div>
 <!-- / WRAPPER ALL -->
