@@ -25,6 +25,34 @@
 /*	01) GRAX BASE
 /*---------------------------------------------------*/
 
+#contact {
+	@media (min-width: 768px) and (max-width: 1024px) {
+		margin-top: 50px !important;
+	}
+}
+#home, #about, #portfolio, #contact, #copyright {
+	@media (min-width: 768px) and (max-width: 1024px) {
+		padding-left: 50px !important;
+		padding-right: 50px !important;
+	}
+}
+#portfolio {
+	background-color: #000000 !important;
+}
+
+#kioto {
+	@media (min-width: 768px) and (max-width: 1024px) {
+		margin-top: 33px !important;
+}
+}
+
+.topbar_in {
+	@media (min-width: 768px) and (max-width: 1024px) {
+		padding-left: 25px !important;
+		padding-right: 25px !important;
+}
+}
+
 html {
 	overflow-x: hidden;
 	padding: 0px;
@@ -868,14 +896,34 @@ h6 { font-size: 16px; }
 	letter-spacing: 10px;
 	
 }
-.grax_tm_portfolio{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	padding: 75px 0px 50px 0px;
-	background-color: #f9f9f9;
+.grax_tm_portfolio {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding: 75px 0px 50px 0px;
+    background-color: #000000;
+    position: relative;
+    overflow: hidden;
 }
+
+.grax_tm_portfolio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('wave-pattern.png'); /* Imagem de onda */
+    animation: waveAnimation 6s ease-in-out infinite;
+    opacity: 0.5;
+}
+
+@keyframes waveAnimation {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100%); }
+}
+
 .grax_tm_portfolio .portfolio_list{
 	width: 100%;
 	height: auto;
