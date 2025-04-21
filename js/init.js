@@ -324,8 +324,8 @@ function grax_tm_my_load(){
 	"use strict";
 	
 	grax_tm_my_waypoint();
-	setTimeout(function(){grax_tm_preloader();},1000);
-	setTimeout(function(){grax_tm_hero_title_fade();},3000);
+	setTimeout(function(){grax_tm_preloader();},500);
+	setTimeout(function(){grax_tm_hero_title_fade();},1500);
 }
 
 // -----------------------------------------------------
