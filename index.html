@@ -522,22 +522,6 @@
     });
   });
 </script>
-	
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Remove a classe 'current' do menu ao carregar
-    document.querySelectorAll(".anchor_nav li").forEach(li => {
-      li.classList.remove("current");
-    });
-
-    // Remover novamente durante o scroll (leve e sem loop)
-    window.addEventListener("scroll", function () {
-      document.querySelectorAll(".anchor_nav li").forEach(li => {
-        li.classList.remove("current");
-      });
-    });
-  });
-</script>
 
 
 
