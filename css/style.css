@@ -2432,9 +2432,3 @@ body.dark .grax_tm_settings .cursor li .svg,
   color: inherit !important;
 }
 
-.anchor_nav li.current a {
-  color: inherit !important;
-  font-weight: inherit !important;
-  background: none !important;
-}
-
