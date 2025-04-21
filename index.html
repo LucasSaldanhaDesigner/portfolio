@@ -522,26 +522,23 @@
     });
   });
 </script>
-
-	<script>
+	
+<script>
   document.addEventListener("DOMContentLoaded", function () {
-    // Remove classe 'current' ao carregar
+    // Remove a classe 'current' do menu ao carregar
     document.querySelectorAll(".anchor_nav li").forEach(li => {
       li.classList.remove("current");
     });
 
-    // Impede que ela seja adicionada novamente no scroll
-    const observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutation) {
-        mutation.target.classList.remove("current");
+    // Remover novamente durante o scroll (leve e sem loop)
+    window.addEventListener("scroll", function () {
+      document.querySelectorAll(".anchor_nav li").forEach(li => {
+        li.classList.remove("current");
       });
-    });
-
-    document.querySelectorAll(".anchor_nav li").forEach(li => {
-      observer.observe(li, { attributes: true, attributeFilter: ["class"] });
     });
   });
 </script>
+
 
 
 
