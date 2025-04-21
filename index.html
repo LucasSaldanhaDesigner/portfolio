@@ -24,6 +24,15 @@
 <!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
 <!-- /STYLES -->
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll("[data-img-url]").forEach(function(el) {
+      el.style.backgroundImage = "url('" + el.getAttribute("data-img-url") + "')";
+    });
+  });
+</script>
+
+	
 </head>
 
 <body> <!-- FOR DARK MODE: Add class "dark" Example: <body class="dark"> -->
