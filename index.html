@@ -523,6 +523,27 @@
   });
 </script>
 
+	<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Remove classe 'current' ao carregar
+    document.querySelectorAll(".anchor_nav li").forEach(li => {
+      li.classList.remove("current");
+    });
+
+    // Impede que ela seja adicionada novamente no scroll
+    const observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        mutation.target.classList.remove("current");
+      });
+    });
+
+    document.querySelectorAll(".anchor_nav li").forEach(li => {
+      observer.observe(li, { attributes: true, attributeFilter: ["class"] });
+    });
+  });
+</script>
+
+
 
 
 
