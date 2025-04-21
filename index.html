@@ -487,6 +487,19 @@
     }
   });
 </script>
+	<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".grax_tm_full_link").forEach(link => {
+      link.addEventListener("click", function (e) {
+        const details = this.closest(".list_inner").querySelector(".details");
+        if (details) {
+          details.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+
 
 <!-- /SCRIPTS -->
 
