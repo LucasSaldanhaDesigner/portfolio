@@ -487,18 +487,26 @@
     }
   });
 </script>
-	<script>
+<script>
   document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".grax_tm_full_link").forEach(link => {
       link.addEventListener("click", function (e) {
-        const details = this.closest(".list_inner").querySelector(".details");
+        const parent = this.closest(".list_inner");
+
+        const details = parent.querySelector(".details");
         if (details) {
           details.style.display = "none";
+        }
+
+        const overlay = parent.querySelector(".overlay");
+        if (overlay) {
+          overlay.style.display = "none";
         }
       });
     });
   });
 </script>
+
 
 
 <!-- /SCRIPTS -->
