@@ -2427,10 +2427,3 @@ body.dark .grax_tm_settings .cursor li .svg,
 	.grax_tm_news .news_list ul{margin: 0px;}
 	.grax_tm_news .news_list ul li{width: 100%;padding-left: 0px;}
 }
-
-@media (max-width: 768px) {
-  .grax_tm_portfolio .overlay {
-    display: none !important;
-  }
-}
-
