@@ -6,6 +6,11 @@
 
 
 jQuery(document).ready(function(){
+	  $('#preloader').addClass('preloaded');
+  setTimeout(function () {
+    $('#preloader').remove();
+  }, 800);
+});
 
 	"use strict";
 	
