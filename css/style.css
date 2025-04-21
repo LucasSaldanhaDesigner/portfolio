@@ -146,6 +146,7 @@ h6 { font-size: 16px; }
 	clear: both;
 	float: left;
 }
+/*
 #preloader {
     position: fixed;
     left: 0;
@@ -239,7 +240,7 @@ h6 { font-size: 16px; }
         -o-transform: translateY(200%);
         transform: translateY(200%);
     }
-}
+} */
 
 /*hiding all*/
 .preloaded .loader_line:after{
@@ -247,7 +248,7 @@ h6 { font-size: 16px; }
 }
 .preloaded  .loader_line{
     opacity: 0;
-    height: 100%!important;
+    height: 100% !important;
 }
 .preloaded:before,
 .preloaded:after{
