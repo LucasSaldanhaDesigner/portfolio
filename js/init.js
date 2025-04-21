@@ -709,3 +709,10 @@ function grax_tm_totop(){
 		return false;
 	});
 }
+
+console.log("Preloader ativado");
+$(window).on('load', function() {
+  $('#preloader').addClass('preloaded');
+  console.log("Preloader finalizado");
+});
+
