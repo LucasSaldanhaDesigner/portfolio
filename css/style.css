@@ -146,7 +146,7 @@ h6 { font-size: 16px; }
 	clear: both;
 	float: left;
 }
-/*
+
 #preloader {
     position: fixed;
     left: 0;
@@ -240,7 +240,7 @@ h6 { font-size: 16px; }
         -o-transform: translateY(200%);
         transform: translateY(200%);
     }
-} */
+}
 
 /*hiding all*/
 .preloaded .loader_line:after{
