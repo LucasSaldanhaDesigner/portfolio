@@ -475,7 +475,21 @@
 <!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->	
 <script src="js/plugins.js"></script>
 <script src="js/init.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const trigger = document.querySelector(".my_trigger");
+    const dropdown = document.querySelector(".grax_tm_mobile_menu .dropdown");
+
+    if (trigger && dropdown) {
+      trigger.addEventListener("click", function () {
+        dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+      });
+    }
+  });
+</script>
+
 <!-- /SCRIPTS -->
 
 </body>
+	
 </html>
