@@ -145,6 +145,36 @@ e(this):c.doc,k=new N(c,e(this)),e(this).data("__nicescroll",k));h.push(k)});ret
  * });
  */
 
+// ---------------------------
+// Salva a posição do scroll
+// ---------------------------
+window.addEventListener('beforeunload', function() {
+    sessionStorage.setItem('scrollPos_' + window.location.pathname, window.scrollY);
+});
+
+// ---------------------------
+// Restaura a posição do scroll
+// ---------------------------
+window.addEventListener('load', function() {
+    const scrollPos = sessionStorage.getItem('scrollPos_' + window.location.pathname);
+    if (scrollPos !== null) {
+        window.scrollTo(0, parseInt(scrollPos, 10));
+    }
+});
+
+// ---------------------------
+// Força reload quando voltar do cache
+// ---------------------------
+window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+        // Recupera scroll salvo antes de recarregar
+        const scrollPos = sessionStorage.getItem('scrollPos_' + window.location.pathname);
+        window.location.reload(); 
+        // Scroll será restaurado após reload pelo event load acima
+    }
+});
+
+
 ;(function($, window, document, undefined){
 
 	// our plugin constructor
