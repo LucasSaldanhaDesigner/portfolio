@@ -887,6 +887,8 @@ h6 { font-size: 16px; }
 /*	06) GRAX PORTFOLIO
 /*---------------------------------------------------*/
 
+.
+
 .grax_tm_title_holder{
 	width: 100%;
 	height: auto;
@@ -898,7 +900,6 @@ h6 { font-size: 16px; }
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 10px;
-	
 }
 .grax_tm_portfolio {
     width: 100%;
@@ -918,7 +919,7 @@ h6 { font-size: 16px; }
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('wave-pattern.png'); /* Imagem de onda */
+    background: url('wave-pattern.png');
     animation: waveAnimation 6s ease-in-out infinite;
     opacity: 0.5;
 }
@@ -970,49 +971,33 @@ h6 { font-size: 16px; }
 	background-position: center;
 	border-radius: 5px;
 }
-.grax_tm_portfolio .overlay{
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	z-index: 1;
-	background-color: #f9f9f9de;
-	border-radius: 5px;
-	
-	opacity: 0;
-	visibility: hidden;
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
+
+.grax_tm_portfolio h3 {
+	margin-left: -10px !important;
 }
-.grax_tm_portfolio ul li .list_inner:hover .overlay{
-	opacity: 1;
-	visibility: visible;
+
+/* Cria uma caixa preto ao redor do texto */
+.grax_tm_portfolio .details h3 {
+    background-color: rgba(0, 0, 0, 0.9); /* fundo preto semitransparente */
+    color: white; /* texto branco */
+    padding: 5px 10px; /* espaço interno */
+    display: inline-block; /* ajusta ao tamanho do texto */
+    border-radius: 4px; /* cantos arredondados opcionais */
 }
-.grax_tm_portfolio .details{
+
+
+/* Texto sempre visível */
+.grax_tm_portfolio .details {
 	position: absolute;
 	bottom: 20px;
 	left: 30px;
 	z-index: 2;
-	
-	opacity: 0;
-	visibility: hidden;
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
-}
-.grax_tm_portfolio ul li .list_inner:hover .details{
 	opacity: 1;
 	visibility: visible;
-	bottom: 30px;
+	color: #000; /* preto pra contraste */
+	font-weight: 700;
 }
+
 .grax_tm_portfolio .details span{font-family: "Poppins";}
 .grax_tm_portfolio .details h3{
 	font-size: 18px;
@@ -1026,62 +1011,7 @@ h6 { font-size: 16px; }
 	right: 0px;
 	z-index: 4;
 }
-.overlay_effect{
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	z-index: 3;
-	border-radius: 5px;
-}
-.overlay_effect:after{
-	position: absolute;
-	content: "";
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	background-color: #f9f9f9;
-	z-index: 1;
-}
-.overlay_effect:before{
-	position: absolute;
-	content: "";
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-}
-.my_waypoint.load .overlay_effect:before{
-	z-index: 2;
-  	background-color: #000;
-  	animation: anim 2s cubic-bezier(0.77, 0, 0.175, 1) both;
-}
-.my_waypoint.load .overlay_effect:after{
- 	animation: anim2 2s cubic-bezier(0.77, 0, 0.175, 1) both;
-}
 
-@keyframes anim{
-  0% {
-    transform: translateX(-100%);
-  }
-  50% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-@keyframes anim2{
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
 
 /*---------------------------------------------------*/
 /*	07) GRAX TALK
@@ -2427,4 +2357,3 @@ body.dark .grax_tm_settings .cursor li .svg,
 	.grax_tm_news .news_list ul{margin: 0px;}
 	.grax_tm_news .news_list ul li{width: 100%;padding-left: 0px;}
 }
-
